@@ -2,157 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#06111f">
-  <meta name="description" content="TechGeekPH Solutions & Services Inc. — reliable fiber internet, CCTV, networking, IT services, and digital client support in Sta. Ana, Taytay, Rizal.">
+  <meta name="description" content="TechGeekPH Solutions & Services Inc. — reliable fiber internet, CCTV, networking and IT solutions in Sta. Ana, Taytay, Rizal.">
   <meta name="robots" content="index,follow">
   <title>TechGeekPH | Internet & Technology Solutions</title>
   <style>
-    :root{
-      --bg:#06111f;--bg2:#0a1728;--card:rgba(255,255,255,.055);--card2:rgba(255,255,255,.085);
-      --line:rgba(255,255,255,.12);--ink:#f7fbff;--muted:#a9b7c8;--blue:#2aa7ff;--blue2:#56c7ff;
-      --red:#e61f52;--green:#36d399;--shadow:0 30px 80px rgba(0,0,0,.36);
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    }
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--bg);overflow-x:hidden}
-    a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1180px,calc(100% - 34px));margin:auto}
-    .ambient{position:fixed;inset:0;pointer-events:none;z-index:-2;background:
-      radial-gradient(circle at 15% 10%,rgba(42,167,255,.16),transparent 31%),
-      radial-gradient(circle at 86% 20%,rgba(230,31,82,.13),transparent 28%),
-      radial-gradient(circle at 55% 80%,rgba(54,211,153,.06),transparent 30%),
-      linear-gradient(180deg,#06111f 0%,#081522 45%,#050d17 100%)}
-    .gridfx{position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.18;background-image:
-      linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,#000,transparent 88%)}
-    .top{position:sticky;top:0;z-index:40;padding:12px 0;background:rgba(6,17,31,.76);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.logo{width:58px;height:48px;display:grid;place-items:center;border-radius:14px;background:#fff;border:1px solid rgba(255,255,255,.2);overflow:hidden}.logo img{width:50px;height:40px;object-fit:contain}.brandtext strong{display:block;font-size:.96rem}.brandtext span{display:block;color:var(--muted);font-size:.72rem;margin-top:2px}.links{display:flex;align-items:center;gap:25px;color:#c9d5e2;font-size:.87rem;font-weight:750}.links a:hover{color:#fff}.navActions{display:flex;gap:9px}.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 16px;border-radius:13px;border:1px solid var(--line);font-weight:850;font-size:.86rem;transition:.18s ease}.pill:hover{transform:translateY(-2px);border-color:rgba(86,199,255,.45)}.pill.primary{background:linear-gradient(135deg,#138edf,#2aa7ff);border-color:transparent;box-shadow:0 12px 30px rgba(42,167,255,.2)}.pill.red{background:linear-gradient(135deg,#c61645,#e61f52);border-color:transparent;box-shadow:0 12px 30px rgba(230,31,82,.18)}
-    .hero{min-height:740px;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(380px,.92fr);gap:54px;align-items:center;padding:78px 0 64px}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:9px 12px;border-radius:999px;border:1px solid rgba(86,199,255,.22);background:rgba(42,167,255,.07);color:#9fdfff;font-size:.76rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.pulse{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(54,211,153,.5);animation:pulse 2s infinite}@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(54,211,153,0)}100%{box-shadow:0 0 0 0 rgba(54,211,153,0)}}
-    h1{margin:22px 0 0;font-size:clamp(3rem,6.2vw,6.1rem);line-height:.91;letter-spacing:-.075em;max-width:760px}.grad{background:linear-gradient(100deg,#fff 0%,#8ad7ff 45%,#56c7ff 75%);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{max-width:680px;margin:25px 0 0;color:#b7c5d4;font-size:clamp(1rem,1.45vw,1.17rem);line-height:1.72}.heroButtons{display:flex;flex-wrap:wrap;gap:11px;margin-top:29px}.micro{display:flex;flex-wrap:wrap;gap:20px;margin-top:27px;color:#9fb0c2;font-size:.82rem;font-weight:700}.micro span{display:flex;align-items:center;gap:8px}.check{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:rgba(54,211,153,.12);color:#73e8bc;font-size:.7rem}
-    .heroCard{position:relative;padding:17px;border-radius:29px;border:1px solid var(--line);background:rgba(255,255,255,.055);backdrop-filter:blur(12px);box-shadow:var(--shadow);overflow:hidden}.heroCard:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(42,167,255,.12),transparent 45%,rgba(230,31,82,.09));pointer-events:none}.visual{position:relative;height:470px;border-radius:22px;overflow:hidden;background:#0c1928}.visual img{width:100%;height:100%;object-fit:cover;opacity:.78;filter:saturate(.88) contrast(1.06)}.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,13,23,.95) 3%,rgba(5,13,23,.14) 62%,rgba(5,13,23,.05))}.visualCopy{position:absolute;left:29px;right:29px;bottom:28px;z-index:2}.visualCopy small{color:#9fdfff;font-weight:850}.visualCopy h2{margin:6px 0 0;font-size:1.9rem;letter-spacing:-.04em}.visualCopy p{margin:8px 0 0;color:#c4d1de;line-height:1.5;font-size:.92rem}.netStat{position:absolute;right:27px;top:27px;z-index:2;padding:10px 12px;border-radius:12px;background:rgba(5,13,23,.72);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);font-size:.75rem;font-weight:850;color:#cfeaff}.netStat b{color:#68e6b5}
-    section{padding:78px 0}.sectionHead{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:31px}.kicker{margin:0 0 9px;color:#72cdfc;font-size:.76rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.sectionHead h2{margin:0;font-size:clamp(2rem,4vw,3.6rem);letter-spacing:-.055em;line-height:1}.sectionHead p{max-width:510px;margin:0;color:var(--muted);line-height:1.65}
-    .quick{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.q{padding:19px;border:1px solid var(--line);border-radius:20px;background:var(--card);transition:.18s ease}.q:hover{transform:translateY(-4px);background:var(--card2);border-color:rgba(86,199,255,.32)}.ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(42,167,255,.18),rgba(86,199,255,.08));border:1px solid rgba(86,199,255,.16);font-size:1.15rem}.q h3{margin:16px 0 5px;font-size:1rem}.q p{margin:0;color:var(--muted);font-size:.8rem;line-height:1.45}.q .go{display:inline-block;margin-top:13px;color:#79d4ff;font-size:.8rem;font-weight:850}
-    .plans{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.plan{position:relative;padding:24px;border:1px solid var(--line);border-radius:23px;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.035));overflow:hidden}.plan.popular{border-color:rgba(42,167,255,.42);box-shadow:0 20px 45px rgba(42,167,255,.08)}.badge{position:absolute;right:16px;top:16px;padding:6px 9px;border-radius:999px;background:rgba(42,167,255,.13);color:#8bddff;font-size:.67rem;font-weight:900;letter-spacing:.05em}.speed{font-size:2.25rem;font-weight:950;letter-spacing:-.06em}.speed small{font-size:.78rem;color:var(--muted);letter-spacing:0}.price{margin-top:7px;color:#fff;font-size:1.45rem;font-weight:900}.price small{color:var(--muted);font-size:.76rem}.plan p{color:var(--muted);font-size:.84rem;line-height:1.5;min-height:52px}.features{display:grid;gap:9px;margin:18px 0 21px;color:#c6d2de;font-size:.8rem}.features span:before{content:"✓";margin-right:8px;color:#69e4b3;font-weight:900}
-    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service{padding:25px;border:1px solid var(--line);border-radius:22px;background:var(--card)}.service .num{color:#688198;font-size:.72rem;font-weight:900;letter-spacing:.08em}.service h3{margin:22px 0 8px;font-size:1.15rem}.service p{margin:0;color:var(--muted);line-height:1.6;font-size:.87rem}.service:hover{border-color:rgba(230,31,82,.3);background:rgba(255,255,255,.07)}
-    .coverage{display:grid;grid-template-columns:1fr 1fr;gap:18px}.covPanel{padding:31px;border-radius:27px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(42,167,255,.09),rgba(255,255,255,.04));min-height:325px}.covPanel h2{margin:0;font-size:2.4rem;letter-spacing:-.055em}.covPanel p{color:var(--muted);line-height:1.65}.zones{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}.zone{padding:13px 14px;border-radius:14px;background:rgba(0,0,0,.18);border:1px solid var(--line);font-size:.84rem;font-weight:800}.zone b{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px;background:var(--green)}.zone.expand b{background:#ffbc4a}.supportBox{padding:31px;border-radius:27px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(230,31,82,.09),rgba(255,255,255,.04));display:flex;flex-direction:column;justify-content:space-between}.supportBox h3{margin:0;font-size:2rem;letter-spacing:-.045em}.supportBox p{color:var(--muted);line-height:1.65}.supportBtns{display:flex;flex-wrap:wrap;gap:10px}
-    .about{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px;align-items:center}.aboutCard{padding:32px;border:1px solid var(--line);border-radius:26px;background:var(--card)}.aboutCard h2{margin:0;font-size:2.55rem;letter-spacing:-.055em}.aboutCard p{color:var(--muted);line-height:1.75}.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{padding:23px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.045)}.stat strong{display:block;font-size:1.55rem}.stat span{display:block;margin-top:5px;color:var(--muted);font-size:.8rem}
-    .cta{padding:44px;border:1px solid rgba(86,199,255,.22);border-radius:30px;background:linear-gradient(125deg,rgba(42,167,255,.13),rgba(230,31,82,.09));display:flex;align-items:center;justify-content:space-between;gap:28px}.cta h2{margin:0;font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.055em}.cta p{margin:10px 0 0;color:var(--muted)}
-    footer{padding:40px 0 27px;border-top:1px solid rgba(255,255,255,.09);margin-top:70px}.foot{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:30px}.foot p,.foot a{color:var(--muted);font-size:.82rem;line-height:1.65}.foot h4{margin:0 0 13px}.footLinks{display:grid;gap:7px}.foot a:hover{color:#fff}.legal{display:flex;justify-content:space-between;gap:20px;padding-top:25px;margin-top:28px;border-top:1px solid rgba(255,255,255,.08);color:#718397;font-size:.75rem}
-    .menu{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff}
-    @media(max-width:1000px){.links{display:none}.menu{display:block}.hero{grid-template-columns:1fr;min-height:auto;padding-top:58px}.heroCard{max-width:720px}.quick{grid-template-columns:repeat(3,1fr)}.plans{grid-template-columns:1fr 1fr}.services{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.coverage{grid-template-columns:1fr}}
-    @media(max-width:680px){.wrap{width:min(100% - 24px,1180px)}.brandtext span{display:none}.navActions .pill:not(.primary){display:none}.hero{padding:44px 0 42px;gap:34px}.visual{height:395px}.heroButtons .pill{width:100%}.quick{grid-template-columns:1fr 1fr}.plans,.services{grid-template-columns:1fr}.sectionHead{display:block}.sectionHead p{margin-top:15px}.zones{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.cta{padding:29px;display:block}.cta .heroButtons{margin-top:22px}.foot{grid-template-columns:1fr}.legal{display:block}.legal span{display:block;margin-top:5px}.speed{font-size:2rem}}
-    @media(max-width:430px){.quick{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.logo{width:52px}.brandtext strong{font-size:.82rem}.visualCopy{left:21px;right:21px;bottom:21px}.visualCopy h2{font-size:1.55rem}}
+    :root{--bg:#06111f;--bg2:#0a1728;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.12);--text:#f8fbff;--muted:#9fb0c3;--blue:#2aa7ff;--blue2:#73d4ff;--red:#e51f52;--green:#39d29a;--gold:#ffc15b;--shadow:0 30px 80px rgba(0,0,0,.35);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);overflow-x:hidden}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}
+    .ambient{position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 14% 8%,rgba(42,167,255,.2),transparent 32%),radial-gradient(circle at 86% 18%,rgba(229,31,82,.14),transparent 28%),linear-gradient(180deg,#06111f,#081827 55%,#050c14)}
+    .grid{position:fixed;inset:0;z-index:-2;opacity:.14;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(#000,transparent 90%)}
+    header{position:sticky;top:0;z-index:50;background:rgba(6,17,31,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px}.brand img{width:58px;height:46px;object-fit:contain;background:#fff;border-radius:12px;padding:3px}.brand strong{display:block;font-size:.96rem}.brand span{display:block;color:var(--muted);font-size:.72rem;margin-top:2px}.links{display:flex;gap:24px;color:#c2cfdb;font-size:.84rem;font-weight:760}.links a:hover{color:#fff}.actions{display:flex;gap:9px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:13px;font-size:.84rem;font-weight:850;transition:.18s}.btn:hover{transform:translateY(-2px);border-color:rgba(115,212,255,.45)}.btn.blue{background:linear-gradient(135deg,#128edc,var(--blue));border-color:transparent}.btn.red{background:linear-gradient(135deg,#c71947,var(--red));border-color:transparent}.menu{display:none;background:transparent;color:#fff;border:1px solid var(--line);border-radius:12px;width:44px;height:44px;font-size:1.2rem}
+    .hero{min-height:720px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:52px;padding:72px 0 58px}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid rgba(115,212,255,.22);background:rgba(42,167,255,.08);border-radius:999px;color:#9edfff;font-size:.74rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(57,210,154,.45);animation:pulse 2s infinite}@keyframes pulse{70%{box-shadow:0 0 0 11px rgba(57,210,154,0)}}h1{font-size:clamp(3.2rem,6.4vw,6.3rem);line-height:.9;letter-spacing:-.075em;margin:22px 0 0}.gradient{background:linear-gradient(100deg,#fff 0%,#a7e5ff 48%,#4fc1ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{max-width:680px;color:#b9c7d5;font-size:clamp(1rem,1.4vw,1.16rem);line-height:1.72;margin-top:25px}.heroBtns{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.trust{display:flex;flex-wrap:wrap;gap:18px;margin-top:25px;color:#98aabd;font-size:.79rem;font-weight:700}.trust span:before{content:"✓";color:#6be2b3;margin-right:7px}.heroCard{padding:16px;border:1px solid var(--line);border-radius:30px;background:rgba(255,255,255,.055);backdrop-filter:blur(15px);box-shadow:var(--shadow)}.visual{height:480px;border-radius:23px;overflow:hidden;position:relative;background:#0b1827}.visual img{width:100%;height:100%;object-fit:cover;opacity:.76;filter:saturate(.9) contrast(1.05)}.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,13,22,.96),rgba(5,13,22,.05) 68%)}.visualText{position:absolute;left:28px;right:28px;bottom:27px;z-index:2}.visualText small{color:#8fdcff;font-weight:850}.visualText h2{margin:6px 0;font-size:1.85rem;letter-spacing:-.04em}.visualText p{margin:0;color:#c2ced9;line-height:1.5;font-size:.9rem}.status{position:absolute;top:25px;right:25px;z-index:2;padding:10px 12px;border-radius:12px;background:rgba(5,13,22,.78);border:1px solid var(--line);font-size:.73rem;font-weight:850}.status b{color:#68e2b3}
+    section{padding:76px 0}.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}.kicker{color:#73d4ff;font-size:.74rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin:0 0 9px}.head h2{font-size:clamp(2rem,4vw,3.55rem);line-height:1;letter-spacing:-.055em;margin:0}.head p{max-width:510px;color:var(--muted);line-height:1.65;margin:0}.quick{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.q{padding:20px;border-radius:20px;border:1px solid var(--line);background:var(--card);transition:.18s}.q:hover{transform:translateY(-4px);border-color:rgba(115,212,255,.34);background:rgba(255,255,255,.085)}.ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(42,167,255,.12);border:1px solid rgba(115,212,255,.15);font-size:1.2rem}.q h3{margin:15px 0 6px;font-size:1rem}.q p{margin:0;color:var(--muted);font-size:.79rem;line-height:1.5}.go{display:inline-block;margin-top:12px;color:#7ed8ff;font-size:.78rem;font-weight:850}
+    .plans{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.plan{position:relative;padding:24px;border-radius:23px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(255,255,255,.075),rgba(255,255,255,.035))}.plan.best{border-color:rgba(42,167,255,.44);box-shadow:0 18px 45px rgba(42,167,255,.09)}.badge{position:absolute;right:15px;top:15px;padding:6px 9px;border-radius:999px;background:rgba(42,167,255,.13);color:#8bddff;font-size:.65rem;font-weight:900}.speed{font-size:2.2rem;font-weight:950;letter-spacing:-.06em}.speed small{font-size:.75rem;color:var(--muted);letter-spacing:0}.price{margin-top:6px;font-size:1.45rem;font-weight:900}.price small{font-size:.73rem;color:var(--muted)}.plan p{color:var(--muted);font-size:.83rem;line-height:1.5;min-height:50px}.features{display:grid;gap:8px;color:#c9d3dd;font-size:.78rem;margin:17px 0 20px}.features span:before{content:"✓";color:#68e2b3;margin-right:8px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service{padding:26px;border:1px solid var(--line);border-radius:22px;background:var(--card)}.service b{color:#5fbef4;font-size:.7rem;letter-spacing:.09em}.service h3{margin:20px 0 8px}.service p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.62}.service:hover{border-color:rgba(229,31,82,.28)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{padding:31px;border:1px solid var(--line);border-radius:27px;background:linear-gradient(145deg,rgba(42,167,255,.09),rgba(255,255,255,.035))}.panel.redish{background:linear-gradient(145deg,rgba(229,31,82,.09),rgba(255,255,255,.035))}.panel h2,.panel h3{font-size:2.15rem;letter-spacing:-.05em;margin:0}.panel p{color:var(--muted);line-height:1.65}.zones{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}.zone{padding:13px 14px;border:1px solid var(--line);border-radius:14px;background:rgba(0,0,0,.16);font-size:.82rem;font-weight:800}.zone:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);margin-right:8px}.zone.expand:before{background:var(--gold)}
+    .about{display:grid;grid-template-columns:1.08fr .92fr;gap:18px}.aboutCard{padding:31px;border-radius:26px;border:1px solid var(--line);background:var(--card)}.aboutCard h2{font-size:2.45rem;letter-spacing:-.055em;margin:0}.aboutCard p{color:var(--muted);line-height:1.72}.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{padding:23px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.045)}.stat strong{font-size:1.45rem;display:block}.stat span{font-size:.78rem;color:var(--muted);display:block;margin-top:5px}.cta{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:42px;border:1px solid rgba(115,212,255,.22);border-radius:30px;background:linear-gradient(125deg,rgba(42,167,255,.13),rgba(229,31,82,.09))}.cta h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.055em;margin:0}.cta p{color:var(--muted);margin:9px 0 0}
+    footer{margin-top:70px;border-top:1px solid rgba(255,255,255,.09);padding:38px 0 26px}.foot{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:28px}.foot h4{margin:0 0 12px}.foot p,.foot a{color:var(--muted);font-size:.8rem;line-height:1.7}.footlinks{display:grid;gap:7px}.foot a:hover{color:#fff}.legal{display:flex;justify-content:space-between;gap:18px;margin-top:28px;padding-top:23px;border-top:1px solid rgba(255,255,255,.08);color:#718396;font-size:.73rem}
+    @media(max-width:1000px){.links{display:none}.menu{display:block}.hero{grid-template-columns:1fr;min-height:auto}.quick{grid-template-columns:repeat(3,1fr)}.plans{grid-template-columns:1fr 1fr}.services{grid-template-columns:1fr 1fr}.split,.about{grid-template-columns:1fr}}
+    @media(max-width:680px){.wrap{width:min(100% - 22px,1180px)}.brand span{display:none}.actions .btn:not(.blue){display:none}.hero{padding:45px 0 35px;gap:34px}.heroBtns .btn{width:100%}.visual{height:390px}.head{display:block}.head p{margin-top:14px}.quick{grid-template-columns:1fr 1fr}.plans,.services{grid-template-columns:1fr}.zones{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.cta{display:block;padding:29px}.cta .heroBtns{margin-top:20px}.foot{grid-template-columns:1fr}.legal{display:block}.legal span{display:block;margin-top:5px}}
   </style>
 </head>
 <body>
-  <div class="ambient"></div><div class="gridfx"></div>
-  <header class="top">
-    <div class="wrap nav">
-      <a class="brand" href="#home" aria-label="TechGeekPH home">
-        <span class="logo"><img src="assets/TechGeekPH%20-%20logo.png" alt="TechGeekPH logo"></span>
-        <span class="brandtext"><strong>TechGeekPH Solutions &amp; Services Inc.</strong><span>Sta. Ana · Taytay, Rizal</span></span>
-      </a>
-      <nav class="links" aria-label="Main navigation">
-        <a href="#internet">Internet</a><a href="#services">Services</a><a href="#coverage">Coverage</a><a href="#about">About</a><a href="#support">Support</a>
-      </nav>
-      <div class="navActions">
-        <a class="pill" href="https://pay.network-techgeekph.com/">Pay Bill</a>
-        <a class="pill primary" href="https://client.network-techgeekph.com/">Client Login</a>
-        <button class="menu" aria-label="Menu" onclick="document.getElementById('mobileNav').toggleAttribute('hidden')">☰</button>
-      </div>
+<div class="ambient"></div><div class="grid"></div>
+<header><div class="wrap nav">
+  <a class="brand" href="#home"><img src="assets/TechGeekPH - logo.png" alt="TechGeekPH logo"><div><strong>TechGeekPH Solutions & Services Inc.</strong><span>Sta. Ana · Taytay · Rizal</span></div></a>
+  <nav class="links"><a href="#internet">Internet</a><a href="#services">Services</a><a href="#coverage">Coverage</a><a href="#about">About</a><a href="#support">Support</a></nav>
+  <div class="actions"><a class="btn" href="https://pay.network-techgeekph.com/">Pay Bill</a><a class="btn blue" href="https://client.network-techgeekph.com/">Client Login</a><button class="menu" aria-label="Menu">☰</button></div>
+</div></header>
+<main id="home">
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Fiber Internet & Technology Solutions</div>
+      <h1>Reliable internet.<br><span class="gradient">Smarter technology.</span></h1>
+      <p class="lead">Fast fiber connectivity for homes and businesses, backed by local technical support, digital billing, online payments, CCTV, networking and professional IT services.</p>
+      <div class="heroBtns"><a class="btn blue" href="https://apply.network-techgeekph.com/">Apply for Internet</a><a class="btn" href="https://client.network-techgeekph.com/">Open Client Portal</a><a class="btn" href="#coverage">Check Coverage</a></div>
+      <div class="trust"><span>Local technical team</span><span>Online billing & payment</span><span>Home & business solutions</span></div>
     </div>
-    <div id="mobileNav" class="wrap" hidden style="padding:12px 0 2px;color:#c8d5e2;font-size:.9rem;font-weight:800">
-      <div style="display:flex;flex-wrap:wrap;gap:18px"><a href="#internet">Internet</a><a href="#services">Services</a><a href="#coverage">Coverage</a><a href="#about">About</a><a href="#support">Support</a></div>
+    <div class="heroCard"><div class="visual"><img src="assets/Banner.png" alt="TechGeekPH network and services"><div class="status"><b>●</b> Network Services Online</div><div class="visualText"><small>TECHGEEKPH CONNECTED SERVICES</small><h2>One network. One digital experience.</h2><p>Manage bills, payments, support and applications through our connected online portals.</p></div></div></div>
+  </div>
+
+  <section><div class="wrap"><div class="head"><div><p class="kicker">Quick access</p><h2>Everything you need, one click away.</h2></div><p>Use the official TechGeekPH portals for billing, payments, support and new applications.</p></div>
+    <div class="quick">
+      <a class="q" href="https://client.network-techgeekph.com/"><div class="ico">👤</div><h3>Client Portal</h3><p>View your account, billing and service information.</p><span class="go">Open portal →</span></a>
+      <a class="q" href="https://pay.network-techgeekph.com/"><div class="ico">💳</div><h3>Pay Bill</h3><p>Access the official TechGeekPH Payment Center.</p><span class="go">Pay online →</span></a>
+      <a class="q" href="https://apply.network-techgeekph.com/"><div class="ico">📝</div><h3>Apply Now</h3><p>Submit a new internet service application online.</p><span class="go">Start application →</span></a>
+      <a class="q" href="https://client.network-techgeekph.com/"><div class="ico">💬</div><h3>Support</h3><p>Contact support for billing and technical concerns.</p><span class="go">Get support →</span></a>
+      <a class="q" href="#coverage"><div class="ico">📡</div><h3>Coverage</h3><p>See our active and expanding service areas.</p><span class="go">View coverage →</span></a>
     </div>
-  </header>
+  </div></section>
 
-  <main id="home">
-    <div class="wrap hero">
-      <div>
-        <div class="eyebrow"><span class="pulse"></span> Local Fiber Internet &amp; Technology Solutions</div>
-        <h1><span class="grad">Reliable internet.</span><br>Smarter technology.</h1>
-        <p class="lead">Fast fiber connectivity, dependable local support, CCTV, networking, and IT solutions built for homes and businesses in our service areas.</p>
-        <div class="heroButtons">
-          <a class="pill primary" href="https://apply.network-techgeekph.com/">Apply for Internet →</a>
-          <a class="pill" href="#internet">View Internet Plans</a>
-          <a class="pill" href="#support">Get Support</a>
-        </div>
-        <div class="micro"><span><i class="check">✓</i>Local support team</span><span><i class="check">✓</i>Digital client portal</span><span><i class="check">✓</i>Secure online payments</span></div>
-      </div>
-      <div class="heroCard">
-        <div class="visual">
-          <img src="assets/Banner.png" alt="TechGeekPH network services">
-          <div class="netStat"><b>●</b> Network services online</div>
-          <div class="visualCopy"><small>TECHGEEKPH CONNECT</small><h2>Connected where it matters.</h2><p>Internet, support, payments, and service requests in one digital ecosystem.</p></div>
-        </div>
-      </div>
+  <section id="internet"><div class="wrap"><div class="head"><div><p class="kicker">Internet plans</p><h2>Simple plans for every connection.</h2></div><p>Choose a plan for everyday browsing, streaming, work-from-home or business connectivity.</p></div>
+    <div class="plans">
+      <div class="plan"><div class="speed">50 <small>Mbps</small></div><div class="price">₱599 <small>/ month</small></div><p>Affordable home internet for everyday connectivity.</p><div class="features"><span>Fiber connection</span><span>Home use</span><span>Local support</span></div><a class="btn" href="https://apply.network-techgeekph.com/">Apply</a></div>
+      <div class="plan best"><span class="badge">BEST VALUE</span><div class="speed">100 <small>Mbps</small></div><div class="price">₱799 <small>/ month</small></div><p>Balanced speed for streaming, gaming and remote work.</p><div class="features"><span>Fiber connection</span><span>Multi-device ready</span><span>Digital client portal</span></div><a class="btn blue" href="https://apply.network-techgeekph.com/">Apply</a></div>
+      <div class="plan"><div class="speed">150 <small>Mbps</small></div><div class="price">₱999 <small>/ month</small></div><p>More speed for larger households and heavier usage.</p><div class="features"><span>High-speed fiber</span><span>Streaming & gaming</span><span>Local technical support</span></div><a class="btn" href="https://apply.network-techgeekph.com/">Apply</a></div>
+      <div class="plan"><span class="badge">BUSINESS</span><div class="speed">200 <small>Mbps</small></div><div class="price">₱1,599 <small>/ month</small></div><p>Connectivity designed for small offices and business operations.</p><div class="features"><span>Business-ready service</span><span>Professional support</span><span>Network consultation</span></div><a class="btn" href="https://apply.network-techgeekph.com/">Inquire</a></div>
     </div>
+  </div></section>
 
-    <section>
-      <div class="wrap">
-        <div class="sectionHead"><div><p class="kicker">Quick Access</p><h2>Everything you need, one tap away.</h2></div><p>Use the official TechGeekPH portals for payments, account access, applications, and customer support.</p></div>
-        <div class="quick">
-          <a class="q" href="https://pay.network-techgeekph.com/"><span class="ico">₱</span><h3>Pay Bill</h3><p>Open the secure TechGeekPH Payment Center.</p><span class="go">Open payment →</span></a>
-          <a class="q" href="https://client.network-techgeekph.com/"><span class="ico">👤</span><h3>Client Portal</h3><p>View billing, account status, and support.</p><span class="go">Client login →</span></a>
-          <a class="q" href="https://apply.network-techgeekph.com/"><span class="ico">✦</span><h3>Apply Now</h3><p>Start a new internet service application.</p><span class="go">Start application →</span></a>
-          <a class="q" href="#coverage"><span class="ico">⌖</span><h3>Coverage</h3><p>See our active and expanding service areas.</p><span class="go">Check area →</span></a>
-          <a class="q" href="#support"><span class="ico">💬</span><h3>Support</h3><p>Billing, payment, and technical concerns.</p><span class="go">Get help →</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="internet">
-      <div class="wrap">
-        <div class="sectionHead"><div><p class="kicker">Internet Plans</p><h2>Fiber plans made for real life.</h2></div><p>Choose a plan for everyday connectivity, streaming, work-from-home, gaming, or business operations.</p></div>
-        <div class="plans">
-          <article class="plan"><div class="speed">50 <small>Mbps</small></div><div class="price">₱599 <small>/ month</small></div><p>Reliable starter connectivity for essential home use.</p><div class="features"><span>Residential fiber</span><span>Everyday browsing &amp; streaming</span><span>Local technical support</span></div><a class="pill" href="https://apply.network-techgeekph.com/">Apply Now</a></article>
-          <article class="plan popular"><span class="badge">BEST VALUE</span><div class="speed">100 <small>Mbps</small></div><div class="price">₱799 <small>/ month</small></div><p>Balanced speed for active households and work-from-home.</p><div class="features"><span>Multi-device ready</span><span>Streaming &amp; online meetings</span><span>Digital client portal</span></div><a class="pill primary" href="https://apply.network-techgeekph.com/">Apply Now</a></article>
-          <article class="plan"><div class="speed">150 <small>Mbps</small></div><div class="price">₱999 <small>/ month</small></div><p>More headroom for heavy streaming, gaming, and larger homes.</p><div class="features"><span>High-speed residential fiber</span><span>Heavy multi-device use</span><span>Priority digital support</span></div><a class="pill" href="https://apply.network-techgeekph.com/">Apply Now</a></article>
-          <article class="plan"><span class="badge">BUSINESS</span><div class="speed">200 <small>Mbps</small></div><div class="price">₱1,599 <small>/ month</small></div><p>Connectivity designed for small business and professional use.</p><div class="features"><span>Business-ready bandwidth</span><span>Network consultation</span><span>Technical service support</span></div><a class="pill" href="https://apply.network-techgeekph.com/">Inquire Now</a></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="wrap">
-        <div class="sectionHead"><div><p class="kicker">Technology Services</p><h2>Beyond internet connectivity.</h2></div><p>Professional technology services for homes, offices, organizations, and growing businesses.</p></div>
-        <div class="services">
-          <article class="service"><span class="num">01 · FIBER INTERNET</span><h3>Residential &amp; Business Internet</h3><p>Local fiber connectivity with digital billing, payment, account access, and support.</p></article>
-          <article class="service"><span class="num">02 · CCTV</span><h3>CCTV &amp; Surveillance</h3><p>Camera installation, NVR/DVR systems, monitoring setup, repair, and maintenance.</p></article>
-          <article class="service"><span class="num">03 · NETWORKING</span><h3>Network &amp; Wi‑Fi Solutions</h3><p>Structured networks, access points, MikroTik configuration, Wi‑Fi coverage, and optimization.</p></article>
-          <article class="service"><span class="num">04 · CABLING</span><h3>Structured Cabling</h3><p>Organized LAN, fiber, and communications cabling for offices, sites, and facilities.</p></article>
-          <article class="service"><span class="num">05 · IT SUPPORT</span><h3>Computer &amp; IT Services</h3><p>Diagnostics, repair, maintenance, deployment, and practical technical support.</p></article>
-          <article class="service"><span class="num">06 · SOLUTIONS</span><h3>Business Technology Projects</h3><p>Custom connectivity, monitoring, infrastructure, and integrated technology solutions.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="coverage">
-      <div class="wrap coverage">
-        <div class="covPanel"><p class="kicker">Coverage</p><h2>Growing our local fiber footprint.</h2><p>TechGeekPH continues to expand service availability across Sta. Ana and nearby covered areas. Final availability depends on the exact address and nearest network access point.</p><div class="zones"><div class="zone"><b></b>Lupang Arenda</div><div class="zone"><b></b>Sta. Ana, Taytay</div><div class="zone"><b></b>West Bank Road</div><div class="zone expand"><b></b>Expansion Areas</div></div><div class="heroButtons"><a class="pill primary" href="https://apply.network-techgeekph.com/">Check Address / Apply →</a></div></div>
-        <div class="supportBox" id="support"><div><p class="kicker">Customer Support</p><h3>Need help with your connection or account?</h3><p>Use your Client Portal for billing concerns, payment verification, technical support, service requests, and account information.</p></div><div class="supportBtns"><a class="pill red" href="https://client.network-techgeekph.com/">Open Client Support</a><a class="pill" href="https://pay.network-techgeekph.com/">Payment Center</a></div></div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="wrap about">
-        <div class="aboutCard"><p class="kicker">About TechGeekPH</p><h2>Local service. Professional technology.</h2><p>TechGeekPH Solutions &amp; Services Inc. delivers internet connectivity and practical technology solutions with a strong focus on responsive local support, reliable infrastructure, and easier digital service for clients.</p><p>Our public website connects customers to the same digital ecosystem used for applications, payments, billing, and support.</p></div>
-        <div class="stats"><div class="stat"><strong>Fiber + IT</strong><span>Internet and technology services under one team</span></div><div class="stat"><strong>Digital First</strong><span>Online billing, payment, application, and support</span></div><div class="stat"><strong>Local Support</strong><span>Field and technical support for covered areas</span></div><div class="stat"><strong>Secure Access</strong><span>Separate portals for clients, staff, and operations</span></div></div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap cta"><div><p class="kicker">Get Connected</p><h2>Ready to join TechGeekPH?</h2><p>Submit your application online and our team can check service availability for your location.</p></div><div class="heroButtons"><a class="pill primary" href="https://apply.network-techgeekph.com/">Apply for Internet →</a><a class="pill" href="https://client.network-techgeekph.com/">Existing Client</a></div></div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="foot">
-        <div><div class="brand"><span class="logo"><img src="assets/TechGeekPH%20-%20logo.png" alt="TechGeekPH logo"></span><span class="brandtext"><strong>TechGeekPH Solutions &amp; Services Inc.</strong><span>Internet · CCTV · Networking · IT Solutions</span></span></div><p style="max-width:480px;margin-top:16px">Serving clients through reliable connectivity, local technical support, and modern digital service tools.</p></div>
-        <div><h4>Customer</h4><div class="footLinks"><a href="https://client.network-techgeekph.com/">Client Portal</a><a href="https://pay.network-techgeekph.com/">Payment Center</a><a href="https://apply.network-techgeekph.com/">New Application</a><a href="#coverage">Coverage</a></div></div>
-        <div><h4>Staff Access</h4><div class="footLinks"><a href="https://employee.network-techgeekph.com/">Employee Portal</a><a href="https://admin.network-techgeekph.com/">Operations Center</a><a href="#services">Services</a><a href="#about">About</a></div></div>
-      </div>
-      <div class="legal"><span>© 2026 TechGeekPH Solutions &amp; Services Inc. All Rights Reserved.</span><span>Official website · network-techgeekph.com</span></div>
+  <section id="services"><div class="wrap"><div class="head"><div><p class="kicker">Technology services</p><h2>Beyond internet connectivity.</h2></div><p>Professional technology solutions for homes, businesses and project sites.</p></div>
+    <div class="services">
+      <div class="service"><b>01 · FIBER INTERNET</b><h3>Residential & Business Internet</h3><p>Reliable fiber connectivity supported by a local operations and field team.</p></div>
+      <div class="service"><b>02 · CCTV</b><h3>CCTV Installation & Maintenance</h3><p>Camera systems, NVR/DVR setup, repairs, upgrades and remote viewing configuration.</p></div>
+      <div class="service"><b>03 · NETWORKING</b><h3>Wi-Fi & Network Solutions</h3><p>Router configuration, MikroTik, structured network design and Wi-Fi optimization.</p></div>
+      <div class="service"><b>04 · CABLING</b><h3>Structured Cabling</h3><p>Organized LAN, fiber and data cabling for offices, facilities and project locations.</p></div>
+      <div class="service"><b>05 · IT SERVICES</b><h3>Computer & Technical Support</h3><p>Troubleshooting, setup, maintenance and general IT support for business operations.</p></div>
+      <div class="service"><b>06 · PROJECTS</b><h3>Technical Outsourcing</h3><p>On-site technical manpower, network deployment and customized project assistance.</p></div>
     </div>
-  </footer>
-</body>
-</html>
+  </div></section>
+
+  <section id="coverage"><div class="wrap split">
+    <div class="panel"><p class="kicker">Coverage</p><h2>Growing our local fiber network.</h2><p>Our network continues to expand across Sta. Ana, Taytay and nearby service areas. Availability depends on the nearest active NAP and network capacity.</p><div class="zones"><div class="zone">Lupang Arenda</div><div class="zone">Sta. Ana</div><div class="zone">West Bank Road</div><div class="zone expand">Expansion Areas</div></div><div class="heroBtns"><a class="btn blue" href="https://apply.network-techgeekph.com/">Check by Application</a></div></div>
+    <div class="panel redish" id="support"><p class="kicker">Client support</p><h3>Need help with your connection?</h3><p>Use the Client Portal for account concerns, billing questions, payment verification and technical support requests.</p><div class="heroBtns"><a class="btn red" href="https://client.network-techgeekph.com/">Open Support</a><a class="btn" href="https://pay.network-techgeekph.com/">Payment Center</a></div></div>
+  </div></section>
+
+  <section id="about"><div class="wrap about">
+    <div class="aboutCard"><p class="kicker">About TechGeekPH</p><h2>Local service. Professional technology.</h2><p>TechGeekPH Solutions & Services Inc. provides internet connectivity and technology services with a focus on responsive local support, practical solutions and connected digital tools for clients.</p><p>Our online ecosystem brings applications, billing, payments and support into a simpler client experience while our field and operations teams handle the physical network behind it.</p></div>
+    <div class="stats"><div class="stat"><strong>Fiber Internet</strong><span>Residential and business connectivity</span></div><div class="stat"><strong>Local Support</strong><span>Field and technical assistance</span></div><div class="stat"><strong>Digital Billing</strong><span>Client portal and online payments</span></div><div class="stat"><strong>IT Solutions</strong><span>CCTV, networking and technical projects</span></div></div>
+  </div></section>
+
+  <section><div class="wrap cta"><div><h2>Ready to get connected?</h2><p>Submit your application online and let our team check service availability in your area.</p></div><div class="heroBtns"><a class="btn blue" href="https://apply.network-techgeekph.com/">Apply Now</a><a class="btn" href="https://client.network-techgeekph.com/">Existing Client</a></div></div></section>
+</main>
+<footer><div class="wrap"><div class="foot"><div><div class="brand"><img src="assets/TechGeekPH - logo.png" alt="TechGeekPH"><div><strong>TechGeekPH Solutions & Services Inc.</strong><span>Internet & Technology Solutions</span></div></div><p>Serving clients with fiber connectivity, CCTV, networking and professional IT services.</p></div><div><h4>Client Services</h4><div class="footlinks"><a href="https://client.network-techgeekph.com/">Client Portal</a><a href="https://pay.network-techgeekph.com/">Payment Center</a><a href="https://apply.network-techgeekph.com/">New Application</a></div></div><div><h4>Staff Access</h4><div class="footlinks"><a href="https://employee.network-techgeekph.com/">Employee Portal</a><a href="https://admin.network-techgeekph.com/">Operations Center</a></div></div></div><div class="legal"><span>© 2026 TechGeekPH Solutions & Services Inc. All rights reserved.</span><span>Official website · network-techgeekph.com</span></div></div></footer>
+<script>
+  document.querySelector('.menu')?.addEventListener('click',()=>{const n=document.querySelector('.links');if(!n)return;n.style.display=n.style.display==='flex'?'none':'flex';n.style.position='absolute';n.style.top='78px';n.style.left='12px';n.style.right='12px';n.style.padding='18px';n.style.flexDirection='column';n.style.background='#0a1728';n.style.border='1px solid rgba(255,255,255,.12)';n.style.borderRadius='16px'});
+</script>
+</body></html>
